@@ -1,0 +1,14 @@
+hub umichHg38Example
+shortLabel UMich hg38 example
+longLabel University of Michigan Bioinformatics Core hg38 example hub
+useOneFile on
+email bioinformatics@umich.edu
+
+genome hg38
+
+track gm12878H3k27ac
+shortLabel GM12878 H3K27ac
+longLabel ENCODE GM12878 H3K27ac signal
+type bigWig
+visibility full
+bigDataUrl https://hgdownload.soe.ucsc.edu/goldenPath/hg38/encodeDCC/wgEncodeRegMarkH3k27ac/wgEncodeBroadHistoneGm12878H3k27acStdSig.bigWig
