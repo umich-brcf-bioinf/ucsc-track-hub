@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hg38 visualization examples</title>
+</head>
+<body>
+  <main>
+    <h1>hg38 visualization examples</h1>
+    <p>Explore two public example datasets on the human GRCh38/hg38 assembly.</p>
+    <h2>UCSC Genome Browser</h2>
+    <p>An ENCODE GM12878 H3K27ac signal track in an hg38 track hub.</p>
+    <p><a id="ucsc" href="hub.txt">Open the hub in UCSC Genome Browser</a></p>
+    <h2>Vitessce</h2>
+    <p>HuBMAP human intestine snATAC-seq genomic profiles, visualized with HiGlass.</p>
+    <p><a id="vitessce" href="vitessce-config.json">Open the Vitessce example</a></p>
+    <p>The examples use different datasets and are not synchronized.</p>
+    <noscript>Enable JavaScript to open the examples in their viewers. The links above point to their configuration files.</noscript>
+  </main>
+  <script>
+    const hubUrl = new URL('hub.txt', window.location.href);
+    const configUrl = new URL('vitessce-config.json', window.location.href);
+    const ucscUrl = new URL('https://genome.ucsc.edu/cgi-bin/hgTracks');
+    ucscUrl.searchParams.set('db', 'hg38');
+    ucscUrl.searchParams.set('position', 'chr7:155799529-155812871');
+    ucscUrl.searchParams.set('hubUrl', hubUrl.href);
+    document.getElementById('ucsc').href = ucscUrl.href;
+    const vitessceUrl = new URL('https://app.vitessce.io/');
+    vitessceUrl.searchParams.set('config', configUrl.href);
+    document.getElementById('vitessce').href = vitessceUrl.href;
+  </script>
+</body>
+</html>

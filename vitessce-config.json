@@ -1,0 +1,30 @@
+{
+  "version": "1.0.15",
+  "name": "HuBMAP human intestine snATAC-seq (hg38)",
+  "description": "Genomic profiles from the HuBMAP human intestine snATAC-seq example.",
+  "datasets": [
+    {
+      "uid": "hubmap-intestine",
+      "name": "Human large intestine, snATAC-seq",
+      "files": [
+        {
+          "fileType": "genomic-profiles.zarr",
+          "url": "https://data-1.vitessce.io/0.0.32/master_release/human_intestine_2020_hubmap/human_intestine_2020_hubmap.genomic-profiles.zarr"
+        }
+      ]
+    }
+  ],
+  "layout": [
+    {
+      "component": "genomicProfiles",
+      "props": {
+        "assembly": "hg38"
+      },
+      "x": 0,
+      "y": 0,
+      "w": 12,
+      "h": 12
+    }
+  ],
+  "initStrategy": "auto"
+}
